@@ -1,0 +1,15 @@
+{
+    "notionAPIToken": "YOUR_NOTION_API_TOKEN",
+    "notionDatabaseId": "YOUR_NOTION_DATABASE_ID",
+		"metrics":[
+      {
+        "metricName": "monthly_bookings",
+        "filepath": "dbt-drift/metrics/monthly_bookings.csv",
+        "dateColumnName": "date",
+        "KPIColumnName": "monthly_booking_value",
+        "timeGrains": [ "month", "quarter"],
+        "dimensions": [],
+        "upstreamFiles":["dbt-drift/metrics/bookings.csv"]
+      }
+     ]
+  }
